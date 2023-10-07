@@ -6,7 +6,9 @@ mode = AES.MODE_CBC
 
 # AES CBC decryption 
 def decryption(encrypted):
-    decryptor = AES.new(key, mode, IV=IV)
+    # decryptor = AES.new(key, mode, IV=IV)
+    # TODO: Have to encode the key and IV to byte before passing into AES encrytion object
+    decryptor = AES.new(key.encode('utf-8'), mode,IV=IV.encode('utf-8'))
     return decryptor.decrypt(encrypted)
 
 

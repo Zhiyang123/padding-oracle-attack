@@ -5,6 +5,7 @@ from Crypto.Cipher import AES
 from settings import *
 mode = AES.MODE_CBC
 
+# TODO: Initialise the key and IV
 key = '0123456789abcdef'
 IV='0123456789abcdef'
 
